@@ -1,0 +1,100 @@
+@import "_imports";
+
+a,
+.Module__link,
+.u-lAside a,
+.u-VCard--site a {
+    text-decoration: none;
+    border-bottom: 1px solid $linkBorderColor;
+    padding-bottom: 0;
+}
+a:visited {
+    border-bottom: 1px solid $linkColorVisited;
+}
+a:hover,
+a:focus {
+    border-bottom: 1px solid $linkColorHoverFocus;
+}
+a:active {
+    border-bottom: 1px solid $linkColorActive;
+}
+.u-Search__button:hover,
+.u-Search__button:focus,
+.u-Search__button:active,
+.u-Search__button:visited,
+.ac-NavAnchor--menu:hover,
+.ac-NavAnchor--menu:focus,
+.ac-NavAnchor--menu:active,
+.ac-NavAnchor--menu:visited,
+.u-NavSite__item:hover,
+.u-NavSite__item:focus,
+.u-NavSite__item:active,
+.u-NavSite__item:visited,
+.u-Masthead__siteName--link:hover,
+.u-Masthead__siteName--link:focus,
+.u-Masthead__siteName--link:active,
+.u-Masthead__siteName--link:visited,
+.u-Masthead__vassar--link:hover,
+.u-Masthead__vassar--link:focus,
+.u-Masthead__vassar--link:active,
+.u-Masthead__vassar--link:visited {
+    border-bottom: none;
+}
+.u-VCard--site {
+    border-top: 1px solid tint($linkColor, 75%);
+}
+html {
+    background: url(../images/css/indprg-bg.png) repeat-x center -1em transparent;
+    position: relative;
+}
+.u-Search__field {
+    border: 8px solid $dkBlue;
+}
+.u-Masthead__siteName--link {
+    @include link-colors(#fff, $linkColorHoverFocus, $linkColorActive, #fff, $linkColorHoverFocus);
+}
+#navigation:target .icon-close {
+    @include link-colors(#fff, $linkColorHoverFocus, $linkColorActive, #fff, $linkColorHoverFocus);
+    svg {
+        max-height: 100%;
+        height: inherit;
+    }
+}
+#navigation:target .u-NavSite__item {
+    @include link-colors(#fff, $linkColorHoverFocus, $linkColorActive, #fff, $linkColorHoverFocus);
+}
+@media (min-width: $small) {
+    html:before {
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-top: 1em solid;
+        border-color: $dkBlue;
+        border-color: rgba(67, 98, 139, 0.6);
+    }
+    .u-Search__field {
+        border: none;
+    }
+    .u-Masthead__siteName--link {
+        @include link-colors($orange, $fontColor, $linkColorActive, $orange, $fontColor);
+    }
+    .u-Masthead__vassar--link {
+        @include link-colors($linkColor, $linkColorHoverFocus, $linkColorActive, $linkColor, $linkColorHoverFocus);
+    }
+    .u-Masthead {
+        background-color: #fff;
+    }
+    .u-NavSite__item {
+        @include link-colors($linkColor, $linkColorHoverFocus, $linkColorActive, $linkColor, $linkColorHoverFocus);
+    }
+    .u-NavSite__item--isCurrent,
+    .u-NavSite__item--isOpen .u-NavSite__item {
+        @include link-colors($fontColor, $linkColorHoverFocus, $linkColorActive, $fontColor, $linkColorHoverFocus);
+    }
+    .u-NavSite__item--isOpen .u-NavSite__item.u-NavSite__item--isCurrent {
+        @include link-colors($linkColor, $linkColorHoverFocus, $linkColorActive, $linkColor, $linkColorHoverFocus);
+    }
+}

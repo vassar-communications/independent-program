@@ -1,0 +1,33 @@
+@import "_imports";
+
+.u-VCard--site {
+    padding-top: 3em;
+    .u-VCard__url {
+        margin-bottom: 0.6em !important;
+    }
+    .u-VCard__adr {
+        margin-bottom: .2em;
+    }
+    .u-VCard__info,
+    .u-List--site {
+        margin: 0 0 .6em;
+    }
+}
+@media (min-width: $small) {
+    .u-lHeader {
+        padding: 2em 3% 0;
+    }
+    .u-Search {
+        top: 2em;
+    }
+    .u-Masthead {
+        display: inline-block;
+        padding: 1.25em;
+        margin-left: -1.25em;
+    }
+}
+@media (min-width: $medium) {
+    html {
+        padding: 1em;
+    }
+}
