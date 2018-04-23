@@ -1,3 +1,58 @@
 @import "typography";
 @import "layout";
 @import "color";
+html.g- {
+    background-image: none;
+}
+
+.g- .PageContent {
+    background: url(../images/css/indprg-bg.png) repeat-x center -1em transparent;
+}
+
+@media (min-width: 37.5em)
+{
+    html.g-:before {
+        display:none;
+        visibility:hidden;
+    }
+    
+    .g- .PageContent:before {
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: inherit;
+        border-top: 1em solid;
+        border-color: #43628B;
+        border-color: rgba(67,98,139,0.6);
+    }
+    
+    .g- .u-lHeader {
+        border-top: solid 1em hsla(213, 33%, 46%, .1);
+    }
+}
+
+@media (min-width: 50em)
+{
+    html.g- {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .g- .PageContent {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+}
+
+@media (min-width: 62.5em)
+{
+    .g- body {
+        max-width: none;
+    }
+
+    .g- .PageContentInner {
+        max-width: 75em;
+        margin: 0 auto;
+    }
+}
