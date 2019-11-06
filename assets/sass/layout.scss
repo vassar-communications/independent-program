@@ -30,4 +30,16 @@
     html {
         padding: 1em;
     }
+    
+    .gf- .u-lContent
+    {
+        padding-right: 5%;
+    }
+}
+
+@media (min-width: $large) {
+    .gf- .PageContent
+    {
+        max-width: none;
+    }
 }
